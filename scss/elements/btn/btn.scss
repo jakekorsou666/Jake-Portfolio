@@ -1,0 +1,99 @@
+button{
+    // @include outline-remove;
+    background: none;
+    border: none;
+    padding: 0;
+}
+$ghost-btn: transparent;
+
+$btn-types: (
+    add: blue,
+    sergio: $ghost-btn,
+) !default;
+
+
+$coco: black;
+$caca: red;
+$cece: blue;
+
+
+// @function baba( $zaza == $coco) {
+//     // @return join($value, $list, $seperator);
+//     @return  $cece
+// }
+
+
+$zaza: $coco;
+
+
+.btn{
+    padding: 8px 8px;
+    border-radius: 4px;
+    color: $coco;
+    // color: baba($caca);
+    @if $zaza == $caca{
+        color: yellow;
+        font-size: 200px;
+    }
+	// &.round{
+    //     border-radius: 50%;
+    //     width: 32px;
+    //     height: 32px;
+    //     position: relative;
+    //     &::before{
+    //         content: "f";
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translate(-50%, -50%);
+    //     }
+    // }
+    // &.link{
+    //     background: none;
+    //     color: blue;
+    //     &:hover{
+    //         background: none;
+    //     }
+    // }
+}
+
+
+@mixin btn-setup ($color){
+    background-color: ($color);
+    &:hover{
+        background-color: darken(($color), 15%);
+    }
+}
+
+@each $type, $color in $btn-types {
+  .btn-#{$type} {
+    @include btn-setup ($color);
+  }
+}
+
+@mixin add-icon ($icon){
+    content: $icon;
+    font-family: awesone;
+    font-size: 12px;
+    padding-right: 12px;
+}
+.icon-star{
+    @include add-icon("/123");
+
+}
+
+
+
+@mixin mq($size) {
+    @media (max-width:$size) {
+         @content;
+         }
+  }
+
+  .card{
+     &.blue{
+        @include mq(1000px){
+            background: yellow;
+        }
+     }
+  }
