@@ -515,10 +515,35 @@ h1 {
   background-color: white;
   margin-bottom: 24px;
   border-radius: 4px;
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card--body {
   padding: 8px;
+}
+
+.card__content {
+  background-color: red;
+  border: 1px solid aqua;
+  color: yellow;
+  padding: 20px 40px;
+}
+
+.card__specials {
+  background-color: red;
+  border: 1px solid aqua;
+  color: yellow;
+  padding: 20px 40px;
+}
+
+.card.blue {
+  background: blue;
 }
 
 button {
@@ -539,5 +564,26 @@ button {
 
 .btn-add:hover {
   background-color: #0000b3;
+}
+
+.btn-sergio {
+  background-color: transparent;
+}
+
+.btn-sergio:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.icon-star {
+  content: "/123";
+  font-family: awesone;
+  font-size: 12px;
+  padding-right: 12px;
+}
+
+@media (max-width: 1000px) {
+  .card.blue {
+    background: yellow;
+  }
 }
 /*# sourceMappingURL=style.css.map */
