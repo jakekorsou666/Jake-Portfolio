@@ -1,0 +1,94 @@
+
+@function prepend($list, $value, $seperator: space) {
+	@return join($value, $list, $seperator);
+}
+@function elementCount($end) {
+	$elements: null;
+	@for $i from 1 through $end {
+		$element: '&:nth-child(#{$i}):nth-last-child(#{(($end + 1) - $i)}),';
+		$elements: prepend($element, $elements);
+	}
+	@return $elements;
+}
+
+@mixin createElements($amount) {
+	@for $i from 1 through $amount {
+		#{elementCount($i)}{
+      --opacity-step: #{(1 / ($i - 1))};
+		}
+	}
+}
+
+
+$max-steps: 10;
+$color1: #8ed2c9;
+$color2: #ff7a5a;
+
+// Blocks
+.block-container{
+  display: flex;
+}
+
+.block{ 
+  position: relative;
+  margin: grid(.2 .1);
+  $size: #{(100/12)}vmin;
+  width: $size; height: $size;
+  background-color: $color1;
+  &::before{
+    content: "";
+    background-color: $color2;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; 
+  }
+  
+  // Goes up to 10 steps.. You can alter this number, but the more.. the more css you generate. So be careful and don't just put a 100 there. The higher the number, the more lines it needs for that number. 
+  
+  @include createElements(10);
+  @for $i from 1 through 10{
+    &:nth-child(#{$i})::before{
+      opacity: calc(#{$i} * var(--opacity-step) - var(--opacity-step));
+    }
+  }
+  
+  // Little dirty to make the first one, when its only one.. for sure the base color and not the secondary color
+  &:first-child::before{
+    opacity: 0;    
+  }
+}
+
+
+.funnel-progress--bar {
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: #f6f6f6;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        overflow: hidden;
+        line-height: 25px;
+        span {
+          position: relative;
+          display: block;
+          width: 0;
+          height: 100%;
+          color: #fff;
+          padding-left: 15px;
+          background-color: blue;
+          &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: red;
+          }
+        }
+        @include createElements(10);
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) span::before {
+            opacity: calc(#{$i} * var(--opacity-step) - var(--opacity-step));
+          }
+        }
+      }
+      

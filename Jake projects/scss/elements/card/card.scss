@@ -1,0 +1,38 @@
+$card-padding: 24px 40px;
+
+
+@mixin card-setup ($back, $border, $color, $pad){
+    background-color: $back;
+    border: 1px solid $border;
+    color: $color;
+    padding: $pad;
+}
+
+@mixin flex-func{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card{
+    border: 1px solid gray;
+    background-color: white;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    background: red;
+    @include flex-func;
+    &--body{
+        padding: 8px;
+    }
+
+    &__content{
+        @include card-setup (red, aqua, yellow, 20px 40px);
+    }
+    &__specials{
+        @include card-setup (red, aqua, yellow, 20px 40px);
+    }
+    &.blue{
+        background: blue;
+    }
+}
+
