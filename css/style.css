@@ -359,9 +359,9 @@ button {
     background-color: #b3b300; }
 
 .btn-hehe {
-  background-color: green; }
+  background-color: purple; }
   .btn-hehe:hover {
-    background-color: #003400; }
+    background-color: #340034; }
 
 .icon-star {
   content: "/123";
