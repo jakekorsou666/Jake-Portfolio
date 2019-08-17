@@ -1,0 +1,97 @@
+.block-container {
+  display: flex; }
+
+.block {
+  position: relative;
+  margin: grid(0.2 0.1);
+  width: 8.3333333333vmin;
+  height: 8.3333333333vmin;
+  background-color: #8ed2c9; }
+  .block::before {
+    content: "";
+    background-color: #ff7a5a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .block:nth-child(1):nth-last-child(1) {
+    --opacity-step: Infinity; }
+  .block:nth-child(1):nth-last-child(2), .block:nth-child(2):nth-last-child(1) {
+    --opacity-step: 1; }
+  .block:nth-child(1):nth-last-child(3), .block:nth-child(2):nth-last-child(2), .block:nth-child(3):nth-last-child(1) {
+    --opacity-step: 0.5; }
+  .block:nth-child(1):nth-last-child(4), .block:nth-child(2):nth-last-child(3), .block:nth-child(3):nth-last-child(2), .block:nth-child(4):nth-last-child(1) {
+    --opacity-step: 0.3333333333; }
+  .block:nth-child(1):nth-last-child(5), .block:nth-child(2):nth-last-child(4), .block:nth-child(3):nth-last-child(3), .block:nth-child(4):nth-last-child(2), .block:nth-child(5):nth-last-child(1) {
+    --opacity-step: 0.25; }
+  .block:nth-child(1):nth-last-child(6), .block:nth-child(2):nth-last-child(5), .block:nth-child(3):nth-last-child(4), .block:nth-child(4):nth-last-child(3), .block:nth-child(5):nth-last-child(2), .block:nth-child(6):nth-last-child(1) {
+    --opacity-step: 0.2; }
+  .block:nth-child(1):nth-last-child(7), .block:nth-child(2):nth-last-child(6), .block:nth-child(3):nth-last-child(5), .block:nth-child(4):nth-last-child(4), .block:nth-child(5):nth-last-child(3), .block:nth-child(6):nth-last-child(2), .block:nth-child(7):nth-last-child(1) {
+    --opacity-step: 0.1666666667; }
+  .block:nth-child(1):nth-last-child(8), .block:nth-child(2):nth-last-child(7), .block:nth-child(3):nth-last-child(6), .block:nth-child(4):nth-last-child(5), .block:nth-child(5):nth-last-child(4), .block:nth-child(6):nth-last-child(3), .block:nth-child(7):nth-last-child(2), .block:nth-child(8):nth-last-child(1) {
+    --opacity-step: 0.1428571429; }
+  .block:nth-child(1):nth-last-child(9), .block:nth-child(2):nth-last-child(8), .block:nth-child(3):nth-last-child(7), .block:nth-child(4):nth-last-child(6), .block:nth-child(5):nth-last-child(5), .block:nth-child(6):nth-last-child(4), .block:nth-child(7):nth-last-child(3), .block:nth-child(8):nth-last-child(2), .block:nth-child(9):nth-last-child(1) {
+    --opacity-step: 0.125; }
+  .block:nth-child(1):nth-last-child(10), .block:nth-child(2):nth-last-child(9), .block:nth-child(3):nth-last-child(8), .block:nth-child(4):nth-last-child(7), .block:nth-child(5):nth-last-child(6), .block:nth-child(6):nth-last-child(5), .block:nth-child(7):nth-last-child(4), .block:nth-child(8):nth-last-child(3), .block:nth-child(9):nth-last-child(2), .block:nth-child(10):nth-last-child(1) {
+    --opacity-step: 0.1111111111; }
+  .block:nth-child(1):nth-last-child(11), .block:nth-child(2):nth-last-child(10), .block:nth-child(3):nth-last-child(9), .block:nth-child(4):nth-last-child(8), .block:nth-child(5):nth-last-child(7), .block:nth-child(6):nth-last-child(6), .block:nth-child(7):nth-last-child(5), .block:nth-child(8):nth-last-child(4), .block:nth-child(9):nth-last-child(3), .block:nth-child(10):nth-last-child(2), .block:nth-child(11):nth-last-child(1) {
+    --opacity-step: 0.1; }
+  .block:nth-child(1):nth-last-child(12), .block:nth-child(2):nth-last-child(11), .block:nth-child(3):nth-last-child(10), .block:nth-child(4):nth-last-child(9), .block:nth-child(5):nth-last-child(8), .block:nth-child(6):nth-last-child(7), .block:nth-child(7):nth-last-child(6), .block:nth-child(8):nth-last-child(5), .block:nth-child(9):nth-last-child(4), .block:nth-child(10):nth-last-child(3), .block:nth-child(11):nth-last-child(2), .block:nth-child(12):nth-last-child(1) {
+    --opacity-step: 0.0909090909; }
+  .block:nth-child(1):nth-last-child(13), .block:nth-child(2):nth-last-child(12), .block:nth-child(3):nth-last-child(11), .block:nth-child(4):nth-last-child(10), .block:nth-child(5):nth-last-child(9), .block:nth-child(6):nth-last-child(8), .block:nth-child(7):nth-last-child(7), .block:nth-child(8):nth-last-child(6), .block:nth-child(9):nth-last-child(5), .block:nth-child(10):nth-last-child(4), .block:nth-child(11):nth-last-child(3), .block:nth-child(12):nth-last-child(2), .block:nth-child(13):nth-last-child(1) {
+    --opacity-step: 0.0833333333; }
+  .block:nth-child(1):nth-last-child(14), .block:nth-child(2):nth-last-child(13), .block:nth-child(3):nth-last-child(12), .block:nth-child(4):nth-last-child(11), .block:nth-child(5):nth-last-child(10), .block:nth-child(6):nth-last-child(9), .block:nth-child(7):nth-last-child(8), .block:nth-child(8):nth-last-child(7), .block:nth-child(9):nth-last-child(6), .block:nth-child(10):nth-last-child(5), .block:nth-child(11):nth-last-child(4), .block:nth-child(12):nth-last-child(3), .block:nth-child(13):nth-last-child(2), .block:nth-child(14):nth-last-child(1) {
+    --opacity-step: 0.0769230769; }
+  .block:nth-child(1):nth-last-child(15), .block:nth-child(2):nth-last-child(14), .block:nth-child(3):nth-last-child(13), .block:nth-child(4):nth-last-child(12), .block:nth-child(5):nth-last-child(11), .block:nth-child(6):nth-last-child(10), .block:nth-child(7):nth-last-child(9), .block:nth-child(8):nth-last-child(8), .block:nth-child(9):nth-last-child(7), .block:nth-child(10):nth-last-child(6), .block:nth-child(11):nth-last-child(5), .block:nth-child(12):nth-last-child(4), .block:nth-child(13):nth-last-child(3), .block:nth-child(14):nth-last-child(2), .block:nth-child(15):nth-last-child(1) {
+    --opacity-step: 0.0714285714; }
+  .block:nth-child(1):nth-last-child(16), .block:nth-child(2):nth-last-child(15), .block:nth-child(3):nth-last-child(14), .block:nth-child(4):nth-last-child(13), .block:nth-child(5):nth-last-child(12), .block:nth-child(6):nth-last-child(11), .block:nth-child(7):nth-last-child(10), .block:nth-child(8):nth-last-child(9), .block:nth-child(9):nth-last-child(8), .block:nth-child(10):nth-last-child(7), .block:nth-child(11):nth-last-child(6), .block:nth-child(12):nth-last-child(5), .block:nth-child(13):nth-last-child(4), .block:nth-child(14):nth-last-child(3), .block:nth-child(15):nth-last-child(2), .block:nth-child(16):nth-last-child(1) {
+    --opacity-step: 0.0666666667; }
+  .block:nth-child(1):nth-last-child(17), .block:nth-child(2):nth-last-child(16), .block:nth-child(3):nth-last-child(15), .block:nth-child(4):nth-last-child(14), .block:nth-child(5):nth-last-child(13), .block:nth-child(6):nth-last-child(12), .block:nth-child(7):nth-last-child(11), .block:nth-child(8):nth-last-child(10), .block:nth-child(9):nth-last-child(9), .block:nth-child(10):nth-last-child(8), .block:nth-child(11):nth-last-child(7), .block:nth-child(12):nth-last-child(6), .block:nth-child(13):nth-last-child(5), .block:nth-child(14):nth-last-child(4), .block:nth-child(15):nth-last-child(3), .block:nth-child(16):nth-last-child(2), .block:nth-child(17):nth-last-child(1) {
+    --opacity-step: 0.0625; }
+  .block:nth-child(1):nth-last-child(18), .block:nth-child(2):nth-last-child(17), .block:nth-child(3):nth-last-child(16), .block:nth-child(4):nth-last-child(15), .block:nth-child(5):nth-last-child(14), .block:nth-child(6):nth-last-child(13), .block:nth-child(7):nth-last-child(12), .block:nth-child(8):nth-last-child(11), .block:nth-child(9):nth-last-child(10), .block:nth-child(10):nth-last-child(9), .block:nth-child(11):nth-last-child(8), .block:nth-child(12):nth-last-child(7), .block:nth-child(13):nth-last-child(6), .block:nth-child(14):nth-last-child(5), .block:nth-child(15):nth-last-child(4), .block:nth-child(16):nth-last-child(3), .block:nth-child(17):nth-last-child(2), .block:nth-child(18):nth-last-child(1) {
+    --opacity-step: 0.0588235294; }
+  .block:nth-child(1):nth-last-child(19), .block:nth-child(2):nth-last-child(18), .block:nth-child(3):nth-last-child(17), .block:nth-child(4):nth-last-child(16), .block:nth-child(5):nth-last-child(15), .block:nth-child(6):nth-last-child(14), .block:nth-child(7):nth-last-child(13), .block:nth-child(8):nth-last-child(12), .block:nth-child(9):nth-last-child(11), .block:nth-child(10):nth-last-child(10), .block:nth-child(11):nth-last-child(9), .block:nth-child(12):nth-last-child(8), .block:nth-child(13):nth-last-child(7), .block:nth-child(14):nth-last-child(6), .block:nth-child(15):nth-last-child(5), .block:nth-child(16):nth-last-child(4), .block:nth-child(17):nth-last-child(3), .block:nth-child(18):nth-last-child(2), .block:nth-child(19):nth-last-child(1) {
+    --opacity-step: 0.0555555556; }
+  .block:nth-child(1)::before {
+    opacity: calc(1 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(2)::before {
+    opacity: calc(2 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(3)::before {
+    opacity: calc(3 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(4)::before {
+    opacity: calc(4 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(5)::before {
+    opacity: calc(5 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(6)::before {
+    opacity: calc(6 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(7)::before {
+    opacity: calc(7 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(8)::before {
+    opacity: calc(8 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(9)::before {
+    opacity: calc(9 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(10)::before {
+    opacity: calc(10 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(11)::before {
+    opacity: calc(11 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(12)::before {
+    opacity: calc(12 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(13)::before {
+    opacity: calc(13 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(14)::before {
+    opacity: calc(14 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(15)::before {
+    opacity: calc(15 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(16)::before {
+    opacity: calc(16 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(17)::before {
+    opacity: calc(17 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(18)::before {
+    opacity: calc(18 * var(--opacity-step) - var(--opacity-step)); }
+  .block:nth-child(19)::before {
+    opacity: calc(19 * var(--opacity-step) - var(--opacity-step)); }
+  .block:first-child::before {
+    opacity: 0; }
+
+/*# sourceMappingURL=gradient-loop.css.map */

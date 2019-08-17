@@ -1,0 +1,31 @@
+button {
+  background: none;
+  border: none;
+  padding: 0; }
+
+.btn {
+  padding: 8px 8px;
+  border-radius: 4px;
+  color: black; }
+
+.btn-add {
+  background-color: blue; }
+  .btn-add:hover {
+    background-color: #0000b3; }
+
+.btn-sergio {
+  background-color: transparent; }
+  .btn-sergio:hover {
+    background-color: rgba(0, 0, 0, 0); }
+
+.icon-star {
+  content: "/123";
+  font-family: awesone;
+  font-size: 12px;
+  padding-right: 12px; }
+
+@media (max-width: 1000px) {
+  .card.blue {
+    background: yellow; } }
+
+/*# sourceMappingURL=btn.css.map */
