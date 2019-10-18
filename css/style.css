@@ -315,7 +315,6 @@ h1 {
   background-color: white;
   margin-bottom: 24px;
   border-radius: 4px;
-  background: red;
   display: flex;
   justify-content: center; }
   .card--body {

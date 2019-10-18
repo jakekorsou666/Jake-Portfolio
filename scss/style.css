@@ -574,6 +574,22 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.btn-baba {
+  background-color: yellow;
+}
+
+.btn-baba:hover {
+  background-color: #b3b300;
+}
+
+.btn-hehe {
+  background-color: purple;
+}
+
+.btn-hehe:hover {
+  background-color: #340034;
+}
+
 .icon-star {
   content: "/123";
   font-family: awesone;

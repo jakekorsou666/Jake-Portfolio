@@ -35,11 +35,11 @@ button {
 }
 
 .btn-hehe {
-  background-color: green;
+  background-color: purple;
 }
 
 .btn-hehe:hover {
-  background-color: #003400;
+  background-color: #340034;
 }
 
 .icon-star {
